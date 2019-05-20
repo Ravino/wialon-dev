@@ -32,7 +32,7 @@ get: function(str){
   }
   return data;
 },
-getbus: function(str,imei){
+getBus: function(str,imei){
   let data = {
     date:'',
     time:'',
