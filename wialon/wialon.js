@@ -1,4 +1,5 @@
-module.exports.get = function(str){
+module.exports = {
+get: function(str){
   let data = {
     date: [],
     time: [],
@@ -30,8 +31,8 @@ module.exports.get = function(str){
     }
   }
   return data;
-};
-module.exports.getbus = function(str,imei){
+},
+getbus: function(str,imei){
   let data = {
     date:'',
     time:'',
@@ -63,4 +64,4 @@ module.exports.getbus = function(str,imei){
     }
   }
   return data;
-}
+} }
