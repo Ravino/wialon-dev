@@ -46,13 +46,14 @@ getBus: function(str,imei){
   }
   let s;
   let im;
-  str = str.split('\n');
+  str = str.split(os.EOL);
   for (let i=0; i<str.length; i++){
     s = str[i].split(';');
     if (s[0][1] == 'L'){
       s[0] = s[0].substring(3);
       im = s[0];
-    } else {
+    }
+    if (s[0][1] == 'D'){
       if (im == imei){
         s[0] = s[0].substring(3);
         data.date = s[0];
