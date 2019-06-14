@@ -1,3 +1,4 @@
+const os = require('os');
 module.exports = {
 get: function(str){
   let data = {
@@ -12,7 +13,7 @@ get: function(str){
   }
   let s;
   let j = -1;
-  str = str.split('\n');
+  str = str.split(os.EOL);
   for (let i=0; i<str.length; i++){
     s = str[i].split(';');
     if (s[0][1] == 'L'){
