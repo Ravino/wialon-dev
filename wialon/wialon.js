@@ -19,7 +19,8 @@ get: function(str){
       j++;
       s[0] = s[0].substring(3);
       data.imei[j] = s[0];
-    } else {
+    };
+    if (s[0][1] == 'D') {
       s[0] = s[0].substring(3);
       data.date[j] = s[0];
       data.time[j] = s[1];
